@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://w0ff1lg5wpby"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=29672989]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1842438087]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.85490197, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1063408360]
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 31.0
+text = "E"
+horizontal_alignment = 1

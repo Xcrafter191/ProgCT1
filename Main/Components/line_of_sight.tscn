@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b72mw0ewrkhlr"]
+
+[ext_resource type="Script" uid="uid://ddb524s5vpoc1" path="res://Script/area_2d.gd" id="1_37t6q"]
+
+[node name="LineOfSight" type="Area2D" unique_id=1267532159]
+script = ExtResource("1_37t6q")
+
+[node name="Hitbox" type="CollisionPolygon2D" parent="." unique_id=939203270]
+position = Vector2(5, 18)
+scale = Vector2(1.8875, 1.8875)
+polygon = PackedVector2Array(-2.6490066, -9.536424, -114, -159, -65, -208, -3, -235, 58, -212, 111, -156)
+
+[node name="RayCast2D" type="RayCast2D" parent="Hitbox" unique_id=1219095607]
+position = Vector2(-2.649006, -9.536423)
+scale = Vector2(0.5298013, 0.5298013)
+target_position = Vector2(-1, -427)
+
+[node name="RayCast2D2" type="RayCast2D" parent="Hitbox" unique_id=723534490]
+position = Vector2(-2.649006, -9.536423)
+scale = Vector2(0.5298013, 0.5298013)
+target_position = Vector2(-1, -427)
+
+[node name="RayCast2D3" type="RayCast2D" parent="Hitbox" unique_id=325986633]
+position = Vector2(-2.649006, -9.536423)
+scale = Vector2(0.5298013, 0.5298013)
+target_position = Vector2(-1, -427)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

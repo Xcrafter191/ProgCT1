@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b5uqf0avlxqfy"]
+
+[node name="Player" type="ColorRect" unique_id=1052390416]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.23137255, 0.40392157, 1, 1)
+
+[node name="Label" type="Label" parent="." unique_id=551503139]
+layout_mode = 0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 31.0
+text = "P"
+horizontal_alignment = 1
+
+[node name="Range" type="Area2D" parent="." unique_id=1629476674]
+
+[node name="Hitbox" type="CollisionPolygon2D" parent="Range" unique_id=1174424301]
+position = Vector2(26, 33)
+scale = Vector2(1.8875, 1.8875)
+polygon = PackedVector2Array(-3, -8, -114, -159, -65, -208, -3, -235, 58, -212, 111, -156)
