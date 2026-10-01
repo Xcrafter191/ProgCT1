@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dxkhjkt28klla"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5h11f"]
+size = Vector2(40, 7)
+
+[node name="Bullet" type="CharacterBody2D" unique_id=273062122]
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=96918470]
+
+[node name="Collision" type="CollisionShape2D" parent="Hitbox" unique_id=1143351445]
+position = Vector2(20, 3.5)
+shape = SubResource("RectangleShape2D_5h11f")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1699722786]
+offset_right = 40.0
+offset_bottom = 7.0
+color = Color(0.74958193, 0.5908804, 0.3438055, 1)
