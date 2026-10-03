@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bfa810daao0o3"]
+
+[ext_resource type="Script" uid="uid://df3krgg6stymq" path="res://Script/game_over.gd" id="1_2smmn"]
+
+[node name="Control" type="Control" unique_id=1252412925]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.5
+offset_top = -325.0
+offset_right = 575.5
+offset_bottom = 325.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2smmn")
+
+[node name="Label" type="Label" parent="." unique_id=1503605621]
+layout_mode = 0
+offset_left = 523.0
+offset_top = 192.0
+offset_right = 620.0
+offset_bottom = 215.0
+text = "GAME OVER!"
+
+[node name="Retry" type="Button" parent="." unique_id=1965808533]
+layout_mode = 0
+offset_left = 544.0
+offset_top = 232.0
+offset_right = 600.0
+offset_bottom = 263.0
+action_mode = 0
+text = "RETRY"
+
+[node name="Exit" type="Button" parent="." unique_id=147304773]
+layout_mode = 0
+offset_left = 552.0
+offset_top = 273.0
+offset_right = 593.0
+offset_bottom = 304.0
+action_mode = 0
+text = "EXIT"
+
+[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

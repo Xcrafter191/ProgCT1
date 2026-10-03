@@ -2,11 +2,17 @@
 
 [ext_resource type="Script" uid="uid://p7vy1vdax1pj" path="res://Script/player.gd" id="1_odsn4"]
 
-[node name="Player" type="ColorRect" unique_id=1052390416]
-offset_right = 40.0
-offset_bottom = 40.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5h11f"]
+size = Vector2(40, 40)
+
+[node name="Player" type="ColorRect" unique_id=1052390416 node_paths=PackedStringArray("marker_spots")]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 color = Color(0.23137255, 0.40392157, 1, 1)
 script = ExtResource("1_odsn4")
+marker_spots = [null, null, null]
 
 [node name="Label" type="Label" parent="." unique_id=551503139]
 layout_mode = 0
@@ -16,9 +22,10 @@ offset_bottom = 31.0
 text = "P"
 horizontal_alignment = 1
 
-[node name="Range" type="Area2D" parent="." unique_id=1629476674]
+[node name="Area2D" type="Area2D" parent="." unique_id=464084679]
+collision_layer = 2
+collision_mask = 2
 
-[node name="Hitbox" type="CollisionPolygon2D" parent="Range" unique_id=1174424301]
-position = Vector2(26, 33)
-scale = Vector2(1.8875, 1.8875)
-polygon = PackedVector2Array(-3, -8, -114, -159, -65, -208, -3, -235, 58, -212, 111, -156)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1300939279]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_5h11f")

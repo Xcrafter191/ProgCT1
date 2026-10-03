@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://w0ff1lg5wpby"]
 
+[ext_resource type="Script" uid="uid://cc2xq3n1pdcyo" path="res://Script/enemy.gd" id="1_wm87q"]
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=29672989]
+script = ExtResource("1_wm87q")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1842438087]
 offset_right = 40.0

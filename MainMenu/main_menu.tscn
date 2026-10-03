@@ -28,5 +28,14 @@ offset_bottom = 510.0
 text = "Quit
 "
 
+[node name="Label" type="Label" parent="ButtonManager" unique_id=1157274723]
+layout_mode = 0
+offset_left = 0.00012207031
+offset_top = 249.0
+offset_right = 129.00012
+offset_bottom = 272.0
+scale = Vector2(8.92, 1.64)
+text = "Block the Bullets"
+
 [connection signal="pressed" from="ButtonManager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="ButtonManager/Quit" to="." method="_on_quit_pressed"]

@@ -1,13 +1,18 @@
 [gd_scene format=3 uid="uid://dxkhjkt28klla"]
 
+[ext_resource type="Script" uid="uid://b8seijbrfvale" path="res://Script/bullet.gd" id="1_6kvyj"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5h11f"]
 size = Vector2(40, 7)
 
 [node name="Bullet" type="CharacterBody2D" unique_id=273062122]
+script = ExtResource("1_6kvyj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1426475934]
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=96918470]
+collision_layer = 2
+collision_mask = 6
 
 [node name="Collision" type="CollisionShape2D" parent="Hitbox" unique_id=1143351445]
 position = Vector2(20, 3.5)
@@ -16,4 +21,12 @@ shape = SubResource("RectangleShape2D_5h11f")
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1699722786]
 offset_right = 40.0
 offset_bottom = 7.0
-color = Color(0.74958193, 0.5908804, 0.3438055, 1)
+color = Color(0.36478522, 0.27537602, 0.13123608, 1)
+
+[node name="Timer" type="Timer" parent="." unique_id=226770845]
+wait_time = 3.5
+one_shot = true
+autostart = true
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
