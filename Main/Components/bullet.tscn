@@ -5,6 +5,8 @@ size = Vector2(40, 7)
 
 [node name="Bullet" type="CharacterBody2D" unique_id=273062122]
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1426475934]
+
 [node name="Hitbox" type="Area2D" parent="." unique_id=96918470]
 
 [node name="Collision" type="CollisionShape2D" parent="Hitbox" unique_id=1143351445]
