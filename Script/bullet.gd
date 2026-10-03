@@ -1,11 +1,10 @@
 extends CharacterBody2D
 
-const bullet_velocity := 400
+var bullet_velocity := 400
 
 
 func _physics_process(delta: float) -> void:
 	position.x -= bullet_velocity * delta
-
 
 func _on_timer_timeout() -> void:
 	queue_free()
